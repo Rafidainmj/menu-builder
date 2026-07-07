@@ -51,5 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
         itemName.value = "";
         itemPrice.value = "";
     });
+    const printMenu = document.getElementById("printMenu");
+
+printMenu.addEventListener("click", () => {
+    window.print();
+});
 
 });
