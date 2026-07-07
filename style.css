@@ -86,27 +86,35 @@ grid-template-columns:1fr;
 
 }
 
-}
 @media print {
 
     .card {
-        display: none;
+        display: none !important;
+    }
+
+    button,
+    input,
+    label {
+        display: none !important;
     }
 
     body {
         background: white;
+        margin: 0;
+        padding: 0;
     }
 
     .preview {
+        width: 100%;
         box-shadow: none;
         border: none;
-        width: 100%;
-        margin: 0;
         padding: 20px;
     }
 
-    button {
-        display: none;
+    @page {
+        size: A4;
+        margin: 10mm;
     }
 
+}
 }
