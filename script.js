@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const itemName = document.getElementById("itemName");
     const itemPrice = document.getElementById("itemPrice");
+    const itemImage = document.getElementById("itemImage");
     const addItem = document.getElementById("addItem");
 
     const createMenu = document.getElementById("createMenu");
@@ -41,10 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const item = document.createElement("div");
         item.className = "item";
 
-        item.innerHTML = `
-            <span>${itemName.value}</span>
-            <span>${itemPrice.value} د.ع</span>
-        `;
+        let imageHTML = "";
+
+if (itemImage.files[0]) {
+    const imageURL = URL.createObjectURL(itemImage.files[0]);
+    imageHTML = `<img src="${imageURL}" style="width:70px;height:70px;border-radius:10px;object-fit:cover;">`;
+}
+
+item.innerHTML = `
+    ${imageHTML}
+    <span>${itemName.value}</span>
+    <span>${itemPrice.value} د.ع</span>
+`;
 
         menuItems.appendChild(item);
 
