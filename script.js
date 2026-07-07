@@ -1,23 +1,24 @@
-// Wait until the page is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Website Loaded Successfully!");
 
-const restaurantName = document.getElementById("restaurantName");
-const title = document.getElementById("title");
+    const restaurantName = document.getElementById("restaurantName");
+    const title = document.getElementById("title");
 
-restaurantName.addEventListener("input", () => {
-    title.textContent = restaurantName.value || "اسم المطعم";
-});});
-const imageInput = document.getElementById("imageInput");
-const previewImage = document.getElementById("previewImage");
+    restaurantName.addEventListener("input", () => {
+        title.textContent = restaurantName.value || "اسم المطعم";
+    });
 
-imageInput.addEventListener("change", () => {
-    const file = imageInput.files[0];
+    const imageInput = document.getElementById("imageInput");
+    const previewImage = document.getElementById("previewImage");
 
-    if (file) {
-        previewImage.src = URL.createObjectURL(file);
-        previewImage.style.display = "block";
-    }
+    imageInput.addEventListener("change", () => {
+        const file = imageInput.files[0];
+
+        if (file) {
+            previewImage.src = URL.createObjectURL(file);
+            previewImage.style.display = "block";
+        }
+    });
+
 });
-}); 
