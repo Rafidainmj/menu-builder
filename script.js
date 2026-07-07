@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageInput = document.getElementById("imageInput");
     const previewImage = document.getElementById("previewImage");
 
+    const itemName = document.getElementById("itemName");
+const itemPrice = document.getElementById("itemPrice");
+const addItem = document.getElementById("addItem");
+
     imageInput.addEventListener("change", () => {
         const file = imageInput.files[0];
 
