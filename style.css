@@ -87,3 +87,26 @@ grid-template-columns:1fr;
 }
 
 }
+@media print {
+
+    .card {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .preview {
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    button {
+        display: none;
+    }
+
+}
